@@ -88,7 +88,7 @@ Git과 GitHub에서 꽤 유용하지만 숨겨져 있는 기능들에 대해 다
 
 ### Adjust Tab Space
 
-diff나 파일 URL에 `?ts=4`를 덧붙이면 탭 문자의 크기를 기본값인 공백 8개 대신 4개로 보여줍니다. `ts` 뒤의 숫자는 설정에 맞게 변경 하실 수 있습니다. gist나 raw 파일 보기에는 적용 되지 않습니다만, [크롬 확장 프로그램](https://chrome.google.com/webstore/detail/github-tab-size/ofjbgncegkdemndciafljngjbdpfmbkn)이나 [오페라 확장 프로그램](https://addons.opera.com/en/extensions/details/github-tab-size/)으로 자동화 할 수 있습니다.
+diff나 파일 URL에 `?ts=4`를 덧붙이면 탭 문자의 크기를 기본값인 공백 8개 대신 4개로 보여줍니다. `ts` 뒤의 숫자는 설정에 맞게 변경 하실 수 있습니다. gist나 raw 파일 보기에는 적용 되지 않습니다만, [크롬 확장 프로그램](https://chrome.google.com/webstore/detail/github-tab-size/ofjbgncegkdemndciafljngjbdpfmbkn)이나 으로 자동화 할 수 있습니다.
 
 여기에 있는 Go 소스 파일은 `?ts=4`를 붙이기 전에는 이렇습니다.
 
@@ -1021,7 +1021,7 @@ $ git config --global alias.ac 'add -A . && commit'
 | `git st` | `git status -sb` | `git config --global alias.st 'status -sb'` |
 | `git tags` | `git tag -l` | `git config --global alias.tags 'tag -l'` |
 | `git branches` | `git branch -a` | `git config --global alias.branches 'branch -a'` |
-| `git cleanup` | `git branch --merged | grep -v '*' | xargs git branch -d` | `git config --global alias.cleanup "!git branch --merged | grep -v '*' | xargs git branch -d"` |
+| `git cleanup` | `git branch --merged \| grep -v '*' \| xargs git branch -d` | `git config --global alias.cleanup "!git branch --merged \| grep -v '*' \| xargs git branch -d"` |
 | `git remotes` | `git remote -v` | `git config --global alias.remotes 'remote -v'` |
 | `git lg` | `git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --` | `git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"` |
 
@@ -1075,7 +1075,6 @@ $ git config --global color.ui 1
 | Official Git Tutorial | http://git-scm.com/docs/gittutorial |
 | Everyday Git | http://git-scm.com/docs/everyday |
 | Git Immersion | http://gitimmersion.com/ |
-| Ry's Git Tutorial | http://rypress.com/tutorials/git/index.html |
 | Git for Computer Scientists | http://eagain.net/articles/git-for-computer-scientists/ |
 | Git Magic | http://www-cs-students.stanford.edu/~blynn/gitmagic/ |
 | GitHub Training Kit | https://training.github.com/kit/ |
